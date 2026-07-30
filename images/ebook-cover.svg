@@ -1,0 +1,48 @@
+<svg width="520" height="680" viewBox="0 0 520 680" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portada del libro digital 1000 Prompts de IA para Todos los Nichos">
+  <defs>
+    <linearGradient id="cover" x1="0" y1="0" x2="520" y2="680" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A1F5E"/>
+      <stop offset="0.5" stop-color="#4834A8"/>
+      <stop offset="1" stop-color="#6C5CE7"/>
+    </linearGradient>
+    <linearGradient id="spine" x1="0" y1="0" x2="26" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1A123F"/>
+      <stop offset="1" stop-color="#2A1F5E"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD37A"/>
+      <stop offset="1" stop-color="#F5A623"/>
+    </linearGradient>
+  </defs>
+
+  <!-- spine -->
+  <rect x="0" y="0" width="26" height="680" fill="url(#spine)"/>
+  <!-- front -->
+  <rect x="26" y="0" width="494" height="680" fill="url(#cover)"/>
+
+  <!-- top eyebrow -->
+  <rect x="62" y="70" width="150" height="30" rx="15" fill="none" stroke="#C9C0FF" stroke-width="1.4"/>
+  <text x="137" y="90" fill="#D9D3FF" font-family="Arial, sans-serif" font-size="12.5" letter-spacing="2" text-anchor="middle">EDICIÓN 2026</text>
+
+  <!-- big number -->
+  <text x="60" y="300" fill="#FFFFFF" font-family="Arial, sans-serif" font-weight="bold" font-size="150" letter-spacing="-6">1000</text>
+  <text x="66" y="340" fill="#C9C0FF" font-family="Arial, sans-serif" font-size="26" letter-spacing="8">PROMPTS DE IA</text>
+
+  <!-- title -->
+  <text x="62" y="430" fill="#FFFFFF" font-family="Georgia, serif" font-weight="bold" font-size="40">para Todos</text>
+  <text x="62" y="478" fill="#FFFFFF" font-family="Georgia, serif" font-weight="bold" font-size="40">los Nichos</text>
+
+  <!-- gold rule -->
+  <rect x="62" y="510" width="90" height="5" rx="2.5" fill="url(#gold)"/>
+
+  <!-- subtitle -->
+  <text x="62" y="552" fill="#D9D3FF" font-family="Arial, sans-serif" font-size="16">Listos para copiar y pegar en</text>
+  <text x="62" y="576" fill="#D9D3FF" font-family="Arial, sans-serif" font-size="16">ChatGPT, Claude, Gemini y más</text>
+
+  <!-- bottom tags -->
+  <text x="62" y="632" fill="#B3A9F0" font-family="Arial, sans-serif" font-size="12.5" letter-spacing="1.5">25 CATEGORÍAS · 1000 COMANDOS</text>
+
+  <!-- subtle glare -->
+  <rect x="26" y="0" width="494" height="680" fill="#FFFFFF" opacity="0.04"/>
+  <polygon points="26,0 220,0 90,680 26,680" fill="#FFFFFF" opacity="0.05"/>
+</svg>

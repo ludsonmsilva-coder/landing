@@ -1,0 +1,6 @@
+# Arquivos locais que nao devem ir para producao
+*.pdf
+*.zip
+!secure/**
+.env.local
+README.md

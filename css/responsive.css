@@ -1,0 +1,91 @@
+/* ============================================================
+   1000 Prompts de IA — responsive.css
+   Puntos de quiebre: 992px (tablet) y 640px (celular)
+   ============================================================ */
+
+/* ---------- Tablet ---------- */
+@media (max-width: 992px) {
+  .section { padding: 72px 0; }
+
+  /* Hero en una columna */
+  .hero { padding: 64px 0 76px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-cta { justify-content: center; }
+  .trust-row { justify-content: center; }
+  .hero-visual { order: -1; }
+  .book-cover { width: 250px; }
+
+  /* Beneficios / testimonios: 2 columnas */
+  .cards { grid-template-columns: repeat(2, 1fr); }
+
+  /* Contenido en una columna */
+  .contenido-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .container { padding: 0 18px; }
+  .section { padding: 56px 0; }
+
+  /* Topbar y header */
+  .topbar { font-size: 12.5px; padding: 8px 12px; }
+  .nav { padding: 12px 18px; }
+  .brand-text { font-size: 16px; }
+
+  /* Hero */
+  .hero-title { font-size: clamp(28px, 8vw, 36px); }
+  .hero-sub { font-size: 17px; }
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { width: 100%; }
+  .book-cover { width: 210px; }
+  .book-badge { padding: 9px 12px; }
+  .book-badge strong { font-size: 22px; }
+  .trust-row { gap: 14px; font-size: 14px; }
+
+  /* Strip */
+  .strip-tools { gap: 16px; }
+  .strip-tools li { font-size: 16px; }
+
+  /* Cards y listas en una columna */
+  .cards { grid-template-columns: 1fr; gap: 16px; }
+  .incluye-list { grid-template-columns: 1fr; }
+
+  /* Preview de prompt */
+  .prompt-preview { padding: 18px; }
+  .prompt-preview-head { flex-wrap: wrap; }
+
+  /* Garantía apilada */
+  .garantia-inner { flex-direction: column; text-align: center; gap: 22px; }
+
+  /* Oferta */
+  .price-card { padding: 32px 22px; }
+  .price-now { font-size: 46px; }
+  .btn-xl { padding: 17px 28px; font-size: 17px; width: 100%; }
+
+  /* Bonus */
+  .bonus-card { padding: 26px 18px; }
+  .bonus-form { grid-template-columns: 1fr; }
+  .bonus-form .btn { width: 100%; }
+
+  /* FAQ */
+  .acc-trigger { font-size: 16px; padding: 17px 18px; }
+  .acc-panel p { padding: 0 18px 18px; }
+
+  /* Footer */
+  .footer-nav { gap: 18px; }
+}
+
+/* ---------- Pantallas muy pequeñas ---------- */
+@media (max-width: 380px) {
+  .hero-title { font-size: 27px; }
+  .section-title { font-size: 25px; }
+  .price-now { font-size: 40px; }
+}
+
+/* ---------- Pantallas grandes ---------- */
+@media (min-width: 1400px) {
+  :root { --maxw: 1180px; }
+  .hero-title { font-size: 58px; }
+}

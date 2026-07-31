@@ -14,7 +14,7 @@
   .hero-cta { justify-content: center; }
   .trust-row { justify-content: center; }
   .hero-visual { order: -1; }
-  .book-cover { width: 250px; }
+  .book-cover { width: 290px; }
 
   /* Beneficios / testimonios: 2 columnas */
   .cards { grid-template-columns: repeat(2, 1fr); }
@@ -39,7 +39,7 @@
   .hero-sub { font-size: 17px; }
   .hero-cta { flex-direction: column; }
   .hero-cta .btn { width: 100%; }
-  .book-cover { width: 210px; }
+  .book-cover { width: 270px; }
   .book-badge { padding: 9px 12px; }
   .book-badge strong { font-size: 22px; }
   .trust-row { gap: 14px; font-size: 14px; }

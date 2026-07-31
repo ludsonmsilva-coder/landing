@@ -41,6 +41,7 @@ class JuiceEffect {
     this.canvas.style.top = "0";
     this.canvas.style.left = "0";
     this.canvas.style.pointerEvents = "none";
+    this.canvas.style.zIndex = "1";
     this.canvas.style.filter = "blur(6px)";
     this.canvas.style.opacity = "0.8";
     
@@ -191,15 +192,15 @@ class JuiceEffect {
 
 // Auto-init quando o DOM estiver pronto
 document.addEventListener("DOMContentLoaded", () => {
-  const heroVisual = document.querySelector(".hero-visual");
-  if (heroVisual) {
-    new JuiceEffect(heroVisual, {
-      density: 28,
-      particleColor: "rgba(115, 85, 247, 0.4)",
-      particleSize: 14,
-      speed: 1.2,
+  const heroSection = document.querySelector(".hero");
+  if (heroSection) {
+    new JuiceEffect(heroSection, {
+      density: 44,
+      particleColor: "rgba(108, 112, 255, 0.46)",
+      particleSize: 20,
+      speed: 1.15,
       hoverEnabled: true,
-      hoverRadius: 140
+      hoverRadius: 240
     });
   }
 });

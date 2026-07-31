@@ -219,6 +219,8 @@ ul { list-style: none; }
   animation-duration: 12s;
 }
 .hero-inner {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1.05fr .95fr;
   gap: 48px;
@@ -284,18 +286,18 @@ ul { list-style: none; }
   pointer-events: none;
 }
 .hero-visual-card::before {
-  width: 120px;
-  height: 120px;
-  background: rgba(245, 166, 35, 0.3);
-  top: -20px;
-  right: -10px;
+  width: 180px;
+  height: 180px;
+  background: rgba(115, 85, 247, 0.42);
+  top: -28px;
+  right: -16px;
 }
 .hero-visual-card::after {
-  width: 100px;
-  height: 100px;
-  background: rgba(255,255,255,0.16);
-  left: -10px;
-  bottom: -10px;
+  width: 170px;
+  height: 170px;
+  background: rgba(45, 127, 249, 0.34);
+  left: -18px;
+  bottom: -16px;
 }
 .hero-visual-card:hover {
   transform: translateY(-6px) scale(1.01);
@@ -312,9 +314,14 @@ ul { list-style: none; }
 .book-cover:hover { transform: rotate(-1deg) translateY(-4px); }
 .book-glow {
   position: absolute;
-  width: 340px; height: 340px;
-  background: radial-gradient(circle, rgba(245,166,35,.35), transparent 65%);
-  filter: blur(10px);
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle,
+      rgba(115, 85, 247, 0.5) 0%,
+      rgba(66, 129, 255, 0.34) 45%,
+      rgba(115, 85, 247, 0) 75%);
+  filter: blur(24px);
+  opacity: 0.95;
   z-index: 0;
 }
 .book-badge {

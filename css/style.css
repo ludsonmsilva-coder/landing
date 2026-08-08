@@ -1106,20 +1106,37 @@ a:focus-visible, button:focus-visible {
   padding-bottom: 34px;
 }
 
-/* Book wrap — filter aqui para nao quebrar z-index entre livros */
+/* Book wrap — perspective container */
 .book-wrap {
   position: relative;
   isolation: isolate;
 }
-.book-left {
-  transform: translateY(-22px);
-  z-index: 1;
-  filter: drop-shadow(10px 24px 22px rgba(0,0,0,0.9));
+.book-left  { z-index: 1; transform: translateY(-22px); }
+.book-right { z-index: 2; transform: translateY(0); }
+
+/* ===== LIVRO 3D — balanço com lombada visível ===== */
+.book-3d {
+  display: flex;
+  align-items: stretch;
+  animation: bookSwingLeft 8s ease-in-out infinite;
+  filter: drop-shadow(10px 22px 22px rgba(0,0,0,0.85));
 }
-.book-right {
-  transform: translateY(0);
-  z-index: 2;
-  filter: drop-shadow(10px 24px 22px rgba(0,0,0,0.9));
+.book-right .book-3d {
+  animation-name: bookSwingRight;
+  animation-delay: -4s;
+}
+
+@keyframes bookSwingLeft {
+  0%, 100% { transform: perspective(900px) rotateY(-28deg) translateY(0px); }
+  35%       { transform: perspective(900px) rotateY(-28deg) translateY(-18px); }
+  55%       { transform: perspective(900px) rotateY(16deg)  translateY(-20px); }
+  85%       { transform: perspective(900px) rotateY(-28deg) translateY(-14px); }
+}
+@keyframes bookSwingRight {
+  0%, 100% { transform: perspective(900px) rotateY(-28deg) translateY(-8px); }
+  35%       { transform: perspective(900px) rotateY(-28deg) translateY(-24px); }
+  55%       { transform: perspective(900px) rotateY(16deg)  translateY(-26px); }
+  85%       { transform: perspective(900px) rotateY(-28deg) translateY(-20px); }
 }
 
 /* ===== LIVRO 3D — spine + capa real ===== */
@@ -1185,12 +1202,6 @@ a:focus-visible, button:focus-visible {
     linear-gradient(to left, rgba(4,1,26,0.95) 0%, rgba(4,1,26,0.6) 8%, transparent 22%);
   pointer-events: none;
   z-index: 2;
-}
-
-/* Crop da faixa branca específica do cover-5-ias.png */
-.book-right .book-cover-img {
-  transform: scale(1.08) translateX(-4%);
-  transform-origin: left center;
 }
 
 .book-cover-img {

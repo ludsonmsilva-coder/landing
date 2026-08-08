@@ -663,6 +663,21 @@ ul { list-style: none; }
 .footer-contact a:hover { color: #fff; }
 .footer-legal { font-size: 13px; color: #7c748f; line-height: 1.7; }
 
+/* Badge IA */
+.footer-ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(115,85,247,0.15), rgba(255,182,39,0.1));
+  border: 1px solid rgba(115,85,247,0.3);
+  border-radius: 999px;
+  padding: 7px 16px;
+  margin-top: 4px;
+}
+.footer-ai-icon { font-size: 16px; }
+.footer-ai-text { font-size: 12px; color: #a090c8; line-height: 1.4; }
+.footer-ai-text strong { color: var(--violet-soft); font-weight: 700; }
+
 /* ----- Accesibilidad: foco visible ----- */
 a:focus-visible, button:focus-visible {
   outline: 3px solid var(--gold);

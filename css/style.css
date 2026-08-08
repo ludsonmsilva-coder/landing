@@ -1122,7 +1122,6 @@ a:focus-visible, button:focus-visible {
   filter: drop-shadow(10px 22px 22px rgba(0,0,0,0.85));
 }
 .book-right .book-3d {
-  animation-name: bookSwingRight;
   animation-delay: -4s;
 }
 

@@ -1,10 +1,11 @@
 /* ============================================================
-   1000 Prompts de IA — script.js
+   Kit Completo 2026 — script.js
    JavaScript puro (sin librerías)
    - Acordeón accesible del FAQ
    - Animación de aparición al hacer scroll
    - Año automático en el pie de página
-   - Botón de compra (marcador para tu enlace de pago)
+   - Botón de compra
+   - Cronómetro de oferta (cuenta regresiva de 24 horas, rolling)
    ============================================================ */
 
 (function () {
@@ -16,6 +17,7 @@
     initYear();
     initCheckout();
     initBonusDownload();
+    initCountdown();
   });
 
   /* ---------- Acordeón del FAQ ---------- */
@@ -165,4 +167,66 @@
       }
     });
   }
+  /* ---------- Cronómetro de oferta (24 h rolling) ---------- */
+  function initCountdown() {
+    var KEY = "kit2026_offer_expiry";
+    var DURATION_MS = 24 * 60 * 60 * 1000; // 24 horas
+
+    function getExpiry() {
+      try {
+        var stored = localStorage.getItem(KEY);
+        var now = Date.now();
+        if (stored && parseInt(stored, 10) > now) {
+          return parseInt(stored, 10);
+        }
+        var expiry = now + DURATION_MS;
+        localStorage.setItem(KEY, expiry.toString());
+        return expiry;
+      } catch (e) {
+        return Date.now() + DURATION_MS;
+      }
+    }
+
+    function pad(n) { return String(n).padStart(2, "0"); }
+
+    function tick() {
+      var remaining = getExpiry() - Date.now();
+      if (remaining < 0) {
+        try { localStorage.removeItem(KEY); } catch (e) {}
+        remaining = 0;
+      }
+
+      var h = Math.floor(remaining / 3600000);
+      var m = Math.floor((remaining % 3600000) / 60000);
+      var s = Math.floor((remaining % 60000) / 1000);
+
+      // Barra de countdown
+      var elH = document.getElementById("cd-hours");
+      var elM = document.getElementById("cd-minutes");
+      var elS = document.getElementById("cd-seconds");
+      if (elH) elH.textContent = pad(h);
+      if (elM) elM.textContent = pad(m);
+      if (elS) elS.textContent = pad(s);
+
+      // Mini hero countdown
+      var hH = document.getElementById("hcd-h");
+      var hM = document.getElementById("hcd-m");
+      var hS = document.getElementById("hcd-s");
+      if (hH) hH.textContent = pad(h);
+      if (hM) hM.textContent = pad(m);
+      if (hS) hS.textContent = pad(s);
+
+      // Price card countdown
+      var pH = document.getElementById("pcd-h");
+      var pM = document.getElementById("pcd-m");
+      var pS = document.getElementById("pcd-s");
+      if (pH) pH.textContent = pad(h);
+      if (pM) pM.textContent = pad(m);
+      if (pS) pS.textContent = pad(s);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  }
+
 })();

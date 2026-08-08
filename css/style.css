@@ -663,20 +663,72 @@ ul { list-style: none; }
 .footer-contact a:hover { color: #fff; }
 .footer-legal { font-size: 13px; color: #7c748f; line-height: 1.7; }
 
-/* Badge IA */
+/* Badge IA destacado */
 .footer-ai-badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, rgba(115,85,247,0.15), rgba(255,182,39,0.1));
-  border: 1px solid rgba(115,85,247,0.3);
-  border-radius: 999px;
-  padding: 7px 16px;
-  margin-top: 4px;
+  gap: 16px;
+  background: linear-gradient(135deg, #1a0e5c 0%, #2d1a8c 50%, #1a0e5c 100%);
+  border: 1.5px solid rgba(160, 100, 255, 0.55);
+  border-radius: 16px;
+  padding: 18px 24px;
+  margin-top: 12px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow:
+    0 0 28px rgba(115,85,247,0.25),
+    0 8px 32px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
 }
-.footer-ai-icon { font-size: 16px; }
-.footer-ai-text { font-size: 12px; color: #a090c8; line-height: 1.4; }
-.footer-ai-text strong { color: var(--violet-soft); font-weight: 700; }
+.footer-ai-badge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(160,100,255,0.08) 50%, transparent 100%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+.footer-ai-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 10px rgba(200,100,255,0.7));
+}
+.footer-ai-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+.footer-ai-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+  color: #FFD700;
+  text-shadow: 0 0 14px rgba(255,215,0,0.4);
+  letter-spacing: 0.3px;
+}
+.footer-ai-sub {
+  font-size: 12px;
+  color: #b8a8e0;
+  line-height: 1.5;
+}
+.footer-ai-stamp {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 13px;
+  color: #FFD700;
+  background: rgba(255,215,0,0.12);
+  border: 1px solid rgba(255,215,0,0.35);
+  border-radius: 8px;
+  padding: 6px 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 1px;
+}
+@keyframes shimmer {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
 
 /* ----- Accesibilidad: foco visible ----- */
 a:focus-visible, button:focus-visible {

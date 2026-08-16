@@ -32,7 +32,7 @@
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .container { padding: 0 18px; }
-  .section { padding: 56px 0; }
+  .section { padding: 44px 0; }
 
   /* Topbar y header */
   .topbar { font-size: 12.5px; padding: 8px 12px; }
@@ -40,10 +40,13 @@
   .brand-text { font-size: 16px; }
 
   /* Countdown bar */
-  .countdown-bar { top: 56px; gap: 10px; padding: 8px 14px; }
-  .cunit { min-width: 44px; padding: 3px 7px; }
+  .countdown-bar { top: 56px; gap: 7px; padding: 7px 10px; }
+  .countdown-bar-text { width: 100%; text-align: center; font-size: 12px; }
+  .countdown-units { gap: 3px; }
+  .cunit { min-width: 40px; padding: 3px 5px; }
   .cunit-num { font-size: 18px; }
-  .countdown-cta { font-size: 12px; padding: 6px 12px; }
+  .cunit-sep { font-size: 18px; }
+  .countdown-cta { font-size: 11px; padding: 6px 9px; }
 
   /* Hero */
   .kit-label { font-size: clamp(28px, 9vw, 42px); }
@@ -51,6 +54,22 @@
   .hero-cta { flex-direction: column; align-items: center; }
   .hero-cta .btn { width: 100%; max-width: 360px; }
   .price-hero { justify-content: center; }
+  .hero { padding: 42px 0 48px; }
+  .hero-inner { gap: 26px; }
+  .hero-visual { gap: 6px; }
+  .kit-visual-title { font-size: 21px; }
+  .books-stage { padding-bottom: 14px; }
+  .hero-books { gap: 16px; padding-bottom: 24px; }
+  .book-left { transform: translateY(-12px); }
+  .book-spine { width: 28px; }
+  .book-face { width: 130px; height: 195px; }
+  .stage-ring { width: 280px; height: 22px; border-width: 2px; }
+  .stage-glow { width: 270px; height: 54px; bottom: -12px; }
+  .book-wrap::after { bottom: -18px; height: 18px; }
+  .kit-feat-bar { gap: 7px; }
+  .kfeat { min-width: 54px; gap: 3px; }
+  .kfeat-ico { width: 34px; height: 34px; font-size: 16px; }
+  .kfeat-txt { font-size: 6.5px; letter-spacing: .3px; }
 
   /* Books */
   .book-card { width: 140px; min-height: 200px; }
@@ -96,6 +115,14 @@
   .section-title { font-size: 25px; }
   .price-now { font-size: 40px; }
   .book-card { width: 120px; min-height: 180px; }
+  .nav { padding: 10px 14px; gap: 8px; }
+  .brand-text em { display: none; }
+  .nav .btn-sm { padding: 10px 13px; font-size: 13px; }
+  .book-face { width: 112px; height: 168px; }
+  .book-spine { width: 24px; }
+  .hero-books { gap: 12px; }
+  .stage-ring { width: 245px; }
+  .stage-glow { width: 235px; }
 }
 
 /* ---------- Pantallas grandes ---------- */
